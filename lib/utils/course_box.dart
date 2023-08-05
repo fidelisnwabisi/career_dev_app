@@ -15,10 +15,10 @@ class CourseBox extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.only(left: 10, right: 10),
+        margin: const EdgeInsets.only(left: 10, right: 10),
         height: 200,
         width: 150,
-        decoration: BoxDecoration(color: Colors.amber),
+        decoration: const BoxDecoration(color: Colors.amber),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

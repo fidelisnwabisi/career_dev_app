@@ -1,4 +1,5 @@
 import 'package:career_dev_app/screen/coding_screen/web_dev.dart';
+import 'package:career_dev_app/utils/course_button.dart';
 import 'package:career_dev_app/utils/title_text.dart';
 import 'package:flutter/material.dart';
 
@@ -10,37 +11,42 @@ class CodingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const TitleText(text: "Coding Screen"),
           const SizedBox(height: 20),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => WebDevelopment()));
+          CourseButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
             },
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              decoration: BoxDecoration(
-                  color: Colors.amber,
-                  border: Border.all(
-                    color: const Color(0xFFa9d470),
-                  ),
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black.withOpacity(0.9), blurRadius: 5)
-                  ]),
-              child: const Center(
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    "Web Development",
-                    style: TextStyle(fontSize: 24),
-                  ),
-                ),
-              ),
-            ),
+            text: "Web Development",
           ),
+          const Spacer(),
+          CourseButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+            },
+            text: "Mobile Development",
+          ),
+          const Spacer(),
+          CourseButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+            },
+            text: "Cyber Security",
+          ),
+          const Spacer(),
+          CourseButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+            },
+            text: "AI & Machine Learning",
+          ),
+          const Spacer(),
         ],
       ),
     );
