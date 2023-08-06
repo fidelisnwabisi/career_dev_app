@@ -1,3 +1,6 @@
+import 'package:career_dev_app/screen/coding_screen/ai_ml.dart';
+import 'package:career_dev_app/screen/coding_screen/cyber_sec.dart';
+import 'package:career_dev_app/screen/coding_screen/mobile_dev.dart';
 import 'package:career_dev_app/screen/coding_screen/web_dev.dart';
 import 'package:career_dev_app/utils/course_button.dart';
 import 'package:career_dev_app/utils/title_text.dart';
@@ -18,7 +21,7 @@ class CodingScreen extends StatelessWidget {
           CourseButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+                  MaterialPageRoute(builder: (_) => const WebDeveScreen()));
             },
             text: "Web Development",
           ),
@@ -26,15 +29,17 @@ class CodingScreen extends StatelessWidget {
           CourseButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+                  MaterialPageRoute(builder: (_) => const MobileDevScreen()));
             },
             text: "Mobile Development",
           ),
           const Spacer(),
           CourseButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (_) => const CyberSceurityScreen()));
             },
             text: "Cyber Security",
           ),
@@ -42,7 +47,7 @@ class CodingScreen extends StatelessWidget {
           CourseButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const WebDevelopment()));
+                  MaterialPageRoute(builder: (_) => const AIMLScreen()));
             },
             text: "AI & Machine Learning",
           ),

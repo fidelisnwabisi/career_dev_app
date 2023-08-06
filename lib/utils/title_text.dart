@@ -10,18 +10,19 @@ class TitleText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       margin: const EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text,
-            style: const TextStyle(
-              fontSize: 42,
-              fontWeight: FontWeight.bold,
-            ),
+      child: Center(
+        child: Text(
+          text,
+          softWrap: true,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(
+            fontSize: 35,
+            fontWeight: FontWeight.bold,
           ),
-        ],
+        ),
       ),
     );
   }
