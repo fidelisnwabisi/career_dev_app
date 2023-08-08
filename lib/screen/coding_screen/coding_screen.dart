@@ -1,10 +1,11 @@
-import 'package:career_dev_app/screen/coding_screen/ai_ml.dart';
-import 'package:career_dev_app/screen/coding_screen/cyber_sec.dart';
-import 'package:career_dev_app/screen/coding_screen/mobile_dev.dart';
-import 'package:career_dev_app/screen/coding_screen/web_dev.dart';
 import 'package:career_dev_app/utils/course_button.dart';
 import 'package:career_dev_app/utils/title_text.dart';
 import 'package:flutter/material.dart';
+
+import 'components/ai_ml.dart';
+import 'components/cyber_sec.dart';
+import 'components/mobile_dev.dart';
+import 'components/web_dev.dart';
 
 class CodingScreen extends StatelessWidget {
   const CodingScreen({super.key});
