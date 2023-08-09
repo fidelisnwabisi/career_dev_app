@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:your_app_name/screens/home_screen.dart'; // Import your home screen
+
+import 'screens/home_screen.dart';
 
 class MainScreen extends StatelessWidget {
   @override
