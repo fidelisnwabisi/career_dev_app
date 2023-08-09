@@ -1,24 +1,20 @@
-import 'package:career_dev_app/screen/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'main_screen.dart'; // Import your main screen
+
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
+      title: 'Career Dev App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
+        primarySwatch: Colors.blue, // Set your app's primary color
       ),
-      home: const HomeScreen(),
+      home: MainScreen(), // Set your main screen as the initial screen
     );
   }
 }
