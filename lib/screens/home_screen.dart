@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'path_selection_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,13 +17,16 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              print("object pressed");
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => PathSelectionScreen(index: index),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PathSelectionScreen(
+                    index: index,
+                    pathIndex: index,
+                    subTopicIndex: 0,
+                  ),
+                ),
+              );
             },
             child: CareerPathItem(careerPath: careerPaths[index]),
           );
