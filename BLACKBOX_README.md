@@ -1,21 +1,3 @@
-# career_dev_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
 Sure, I can help you with that.
 
 # career_dev_app
@@ -62,4 +44,4 @@ The career_dev_app is licensed under the MIT License.
 
 ## Contact
 
-If you have any questions about the career_dev_app, please contact me at fidelisnwabisi@gmail.com
+If you have any questions about the career_dev_app, please contact us at [email protected]
