@@ -1,6 +1,8 @@
 import 'package:career_dev_app/utils/screen_title.dart';
 import 'package:flutter/material.dart';
 
+import 'career_path.dart';
+
 class Career {
   final String name;
   final IconData icon;
@@ -63,7 +65,14 @@ class HomeScreen extends StatelessWidget {
                   // Create your grid item widgets here
                   return ElevatedButton(
                     onPressed: () {
-                      // Handle button press
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CareerPathScreen(
+                            careerName: careers[index].name,
+                          ),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 4,
