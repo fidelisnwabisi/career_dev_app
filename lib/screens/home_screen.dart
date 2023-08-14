@@ -1,11 +1,25 @@
 import 'package:career_dev_app/utils/screen_title.dart';
 import 'package:flutter/material.dart';
 
+class Career {
+  final String name;
+  final IconData icon;
+
+  Career({required this.name, required this.icon});
+}
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<Career> careers = [
+      Career(name: 'Coding', icon: Icons.code),
+      Career(name: 'Marketing', icon: Icons.mark_email_read_outlined),
+      Career(name: 'Management', icon: Icons.work),
+      Career(name: 'Writing', icon: Icons.edit),
+    ];
+
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -18,14 +32,61 @@ class HomeScreen extends StatelessWidget {
             alignment: Alignment.topLeft,
           ),
         ),
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 30),
-            SizedBox(
+            const SizedBox(height: 30),
+            const SizedBox(
               height: 160,
               child: ScreenTitle(
                 text: "Career Development App",
+              ),
+            ),
+            const SizedBox(height: 30),
+            const Text(
+              "Select Career Path",
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+            ),
+            const SizedBox(height: 30),
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                ),
+                itemCount: careers.length, // Use the length of the careers list
+                itemBuilder: (BuildContext context, int index) {
+                  // Create your grid item widgets here
+                  return ElevatedButton(
+                    onPressed: () {
+                      // Handle button press
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 4,
+                      backgroundColor:
+                          Colors.white, // Background color of the card
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(careers[index].icon, size: 48, color: Colors.blue),
+                        const SizedBox(height: 8),
+                        Text(
+                          careers[index].name,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
           ],
@@ -34,14 +95,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
 
 
 
