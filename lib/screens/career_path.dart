@@ -29,6 +29,18 @@ class CareerPathScreen extends StatelessWidget {
             text: "Select a Course under $careerName",
             color: Colors.blue,
           ),
+          Flexible(
+            child: Container(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text(
+                  "data",
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
         ] // Display career details here
             ),
       ),
