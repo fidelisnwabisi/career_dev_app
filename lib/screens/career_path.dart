@@ -2,14 +2,24 @@ import 'package:flutter/material.dart';
 
 class CareerPathScreen extends StatelessWidget {
   final String careerName;
+  final IconData careerIcon;
 
-  CareerPathScreen({required this.careerName});
+  CareerPathScreen({required this.careerName, required this.careerIcon});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(careerName), // Display career name as the title
+        centerTitle: true,
+        title: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(careerIcon), // Display career icon
+            SizedBox(width: 10), // Add spacing between icon and title
+            Text(careerName), // Display career name as the title
+          ],
+        ),
       ),
       body: Center(
         child: Text("Details about $careerName"), // Display career details here

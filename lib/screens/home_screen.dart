@@ -70,6 +70,8 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(
                           builder: (context) => CareerPathScreen(
                             careerName: careers[index].name,
+                            careerIcon:
+                                careers[index].icon, // Pass the career icon
                           ),
                         ),
                       );
