@@ -42,6 +42,7 @@ class HomeScreen extends StatelessWidget {
               height: 160,
               child: ScreenTitle(
                 text: "Career Development App",
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 30),

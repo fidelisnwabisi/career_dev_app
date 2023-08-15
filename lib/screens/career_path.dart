@@ -1,3 +1,4 @@
+import 'package:career_dev_app/utils/screen_title.dart';
 import 'package:flutter/material.dart';
 
 class CareerPathScreen extends StatelessWidget {
@@ -21,8 +22,15 @@ class CareerPathScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
-        child: Text("Details about $careerName"), // Display career details here
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(children: [
+          ScreenTitle(
+            text: "Select a Course under $careerName",
+            color: Colors.blue,
+          ),
+        ] // Display career details here
+            ),
       ),
     );
   }

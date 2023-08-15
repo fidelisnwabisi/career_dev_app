@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class ScreenTitle extends StatelessWidget {
   final String text;
+  final Color color;
   const ScreenTitle({
     super.key,
     required this.text,
+    required this.color,
   });
 
   @override
@@ -12,8 +14,7 @@ class ScreenTitle extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.center,
-      style: const TextStyle(
-          color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold),
+      style: TextStyle(color: color, fontSize: 36, fontWeight: FontWeight.bold),
     );
   }
 }
