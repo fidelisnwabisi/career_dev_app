@@ -1,5 +1,6 @@
-import 'package:career_dev_app/utils/screen_title.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/screen_title.dart';
 
 class CareerPathScreen extends StatelessWidget {
   final String careerName;
@@ -14,39 +15,52 @@ class CareerPathScreen extends StatelessWidget {
         centerTitle: true,
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(careerIcon), // Display career icon
-            SizedBox(width: 10), // Add spacing between icon and title
-            Text(careerName), // Display career name as the title
+            Icon(careerIcon),
+            SizedBox(width: 10),
+            Text(careerName),
           ],
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(children: [
-          ScreenTitle(
-            text: "Select a Course under $careerName",
-            color: Colors.blue,
-          ),
-          Flexible(
-            child: Container(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text(
-                  "data",
-                  style: TextStyle(fontSize: 24),
-                ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ScreenTitle(
+              text: "Select a Course under $careerName",
+              color: Colors.blue,
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 4, // Replace with the number of subtopics
+                itemBuilder: (BuildContext context, int index) {
+                  return Card(
+                    elevation: 4,
+                    child: ListTile(
+                      leading: Image.asset(
+                        "images/space.png", // Replace with subtopic image
+                        width: 100,
+                        height: 100,
+                      ),
+                      title: Text(
+                          "Subtopic ${index + 1}"), // Replace with subtopic name
+                      onTap: () {
+                        // Navigate to subtopic details page
+                      },
+                    ),
+                  );
+                },
               ),
             ),
-          ),
-        ] // Display career details here
-            ),
+          ],
+        ),
       ),
     );
   }
 }
+
 
 
 
