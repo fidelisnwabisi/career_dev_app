@@ -6,8 +6,9 @@ import 'career_path.dart';
 class Career {
   final String name;
   final IconData icon;
+  final List<String> subtopics; // Add a list of subtopics
 
-  Career({required this.name, required this.icon});
+  Career({required this.name, required this.icon, required this.subtopics});
 }
 
 class HomeScreen extends StatelessWidget {
@@ -16,10 +17,26 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Career> careers = [
-      Career(name: 'Coding', icon: Icons.code),
-      Career(name: 'Marketing', icon: Icons.mark_email_read_outlined),
-      Career(name: 'Management', icon: Icons.work),
-      Career(name: 'Writing', icon: Icons.edit),
+      Career(
+        name: 'Coding',
+        icon: Icons.code,
+        subtopics: ['JavaScript', 'Python', 'Java', 'Flutter'],
+      ),
+      Career(
+        name: 'Marketing',
+        icon: Icons.mark_email_read_outlined,
+        subtopics: ['JavaScript2', 'Python2', 'Java2', 'Flutter2'],
+      ),
+      Career(
+        name: 'Management',
+        icon: Icons.work,
+        subtopics: ['JavaScript3', 'Python3', 'Java3', 'Flutter3'],
+      ),
+      Career(
+        name: 'Writing',
+        icon: Icons.edit,
+        subtopics: ['JavaScript4', 'Python4', 'Java4', 'Flutter4'],
+      ),
     ];
 
     return Scaffold(
@@ -71,8 +88,9 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(
                           builder: (context) => CareerPathScreen(
                             careerName: careers[index].name,
-                            careerIcon:
-                                careers[index].icon, // Pass the career icon
+                            careerIcon: careers[index].icon,
+                            // subtopics:
+                            //     careers[index].subtopics, // Pass the subtopics
                           ),
                         ),
                       );
