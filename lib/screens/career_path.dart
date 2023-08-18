@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../shared/career_subtopic.dart';
 import '../utils/screen_title.dart';
 
 class CareerPathScreen extends StatelessWidget {
@@ -17,7 +18,7 @@ class CareerPathScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Icon(careerIcon),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Text(careerName),
           ],
         ),
@@ -31,29 +32,10 @@ class CareerPathScreen extends StatelessWidget {
               text: "Select a Course under $careerName",
               color: Colors.blue,
             ),
-            SizedBox(height: 20),
-            Expanded(
-              child: ListView.builder(
-                itemCount: 4, // Replace with the number of subtopics
-                itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                    elevation: 4,
-                    child: ListTile(
-                      leading: Image.asset(
-                        "images/space.png", // Replace with subtopic image
-                        width: 100,
-                        height: 100,
-                      ),
-                      title: Text(
-                          "Subtopic ${index + 1}"), // Replace with subtopic name
-                      onTap: () {
-                        // Navigate to subtopic details page
-                      },
-                    ),
-                  );
-                },
-              ),
-            ),
+            const SizedBox(height: 20),
+            Flexible(
+              child: CareerSubtopic(),
+            )
           ],
         ),
       ),
